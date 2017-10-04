@@ -161,7 +161,7 @@ def crear_enemigo():
     actor = Asteroide(pilas)
     enemigos.agregar(actor)
 
-pilas.tareas.siempre(0.8, crear_enemigo)
+pilas.tareas.siempre(0.65, crear_enemigo)
 #----------------------------------------------------------------
 
 # Crear Estrella-------------------------------------------------
@@ -170,7 +170,7 @@ def crear_estrella():
     estrella.escala = 0.5
     pilas.colisiones.agregar(estrella, nave, asignar_arma_doble)
 
-pilas.tareas.siempre(22, crear_estrella)
+pilas.tareas.siempre(25, crear_estrella)
 #-----------------------------------------------------------------
 
 # Crear Estrella-------------------------------------------------
@@ -179,7 +179,7 @@ def crear_moneda():
     moneda.escala = 2
     pilas.colisiones.agregar(moneda, nave, asignar_arma_rapida)
 
-pilas.tareas.siempre(53, crear_moneda)
+pilas.tareas.siempre(60, crear_moneda)
 #-----------------------------------------------------------------
 
 # Crear NAVE------------------------------------------------------
@@ -199,13 +199,13 @@ def asignar_arma_simple():
 def asignar_arma_doble(estrella, nave):
     nave.disparo_doble = True
     estrella.eliminar()
-    pilas.tareas.siempre(10, asignar_arma_simple)
+    pilas.tareas.siempre(8, asignar_arma_simple)
     pilas.avisar("OBTIENES ARMA DOBLE")
 
 def asignar_arma_rapida(moneda, nave):
     nave.demora_entre_disparos = 1
     moneda.eliminar()
-    pilas.tareas.siempre(10, asignar_arma_simple)
+    pilas.tareas.siempre(8, asignar_arma_simple)
     pilas.avisar("OBTIENES ARMA RAPIDA")
 
 def perder(nave, enemigos):
