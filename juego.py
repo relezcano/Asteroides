@@ -161,7 +161,7 @@ def crear_enemigo():
     actor = Asteroide(pilas)
     enemigos.agregar(actor)
 
-pilas.tareas.siempre(1, crear_enemigo)
+pilas.tareas.siempre(0.8, crear_enemigo)
 #----------------------------------------------------------------
 
 # Crear Estrella-------------------------------------------------
@@ -170,7 +170,7 @@ def crear_estrella():
     estrella.escala = 0.5
     pilas.colisiones.agregar(estrella, nave, asignar_arma_doble)
 
-pilas.tareas.siempre(28, crear_estrella)
+pilas.tareas.siempre(22, crear_estrella)
 #-----------------------------------------------------------------
 
 # Crear Estrella-------------------------------------------------
