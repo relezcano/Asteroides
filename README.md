@@ -1,4 +1,4 @@
-# Asteroides
+# ASTEROIDES
 
 #Asteroides es un juego programado en Python utilizando las librerias de Pilasengine.
 #Desarrollado como un trabajo practico para la materia Programación Orientada a Objetos (POO) de la carrera de Sistemas del
@@ -36,11 +36,13 @@ barra espaciadora.
 
 # División de archivos:
 
-#El juego esta dividido en 2 archivos.
+# El juego esta dividido en 2 archivos.
 #El primer archivo contiene el Menu del juego, con las secciones 'Iniciar Juego', 'Ayuda' y 'Salir'.
 Nombre del archivo: menu.py
 
-#El segundo archivo contiene el juego propiamente dicho, con los actores personalizados, las funciones del juego, armas obtenibles, objetos enemigos y de mejoras.
+#El segundo archivo contiene el juego propiamente dicho, con los actores personalizados, las funciones del juego, armas obtenibles, objetos de mejoras, fondo interactivo.
 Este archivo es importado al código del menu para relacionar dicho menu con el código del juego. Se utiliza "import juego" en el menu para lograr esto.
+
+@ Los actores fueron personalizados en base a modelos prediseñados de la libreria Pilas, cambiando y agregando funciones, imagenes, tamaños, ubicaciones, acciones y demas propiedades de dichos objetos.
 
 # Trabajo realizado por Ramiro Lezcano, 1° año de la carrera de Sistemas, Instituto Capacitas. Profesor: Lucas Passalaqua.
