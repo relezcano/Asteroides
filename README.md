@@ -43,7 +43,6 @@ Nombre del archivo: menu.py
 #El segundo archivo contiene el juego propiamente dicho, con los actores personalizados, las funciones del juego, armas obtenibles, objetos de mejoras, fondo interactivo.
 Este archivo es importado al código del menu para relacionar dicho menu con el código del juego. Se utiliza "import juego" en el menu para lograr esto.
 
-@ Los actores fueron personalizados en base a modelos prediseñados de la libreria Pilas, cambiandoles funciones, imagenes, 
-tamaños, ubicaciones, acciones y demas propiedades de dichos objetos.
+@ Los actores fueron personalizados en base a modelos prediseñados de la libreria Pilas, cambiando y agregando funciones, imagenes, tamaños, ubicaciones, acciones y demas propiedades de dichos objetos.
 
 # Trabajo realizado por Ramiro Lezcano, 1° año de la carrera de Sistemas, Instituto Capacitas. Profesor: Lucas Passalaqua.
