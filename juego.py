@@ -169,7 +169,7 @@ def crear_estrella():
     estrella = pilasengine.actores.Estrella(pilas)
     estrella.escala = 0.5
     pilas.colisiones.agregar(estrella, nave, asignar_arma_doble)
-    estrella.rotacion = [360, -360]
+    estrella.rotacion = [-360, 360]
 
 pilas.tareas.siempre(25, crear_estrella)
 #-----------------------------------------------------------------
