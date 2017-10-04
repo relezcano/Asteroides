@@ -138,7 +138,7 @@ class Asteroide(pilasengine.actores.Actor):
         self.escala = 0.5
         self.aprender( pilas.habilidades.PuedeExplotar )
         self.x = pilas.azar(-200, 200)
-        self.y = pilas.azar(300, 300)
+        self.y = 300
         self.velocidad = pilas.azar(10, 60) / 10.0
 
     def actualizar(self):
@@ -169,6 +169,7 @@ def crear_estrella():
     estrella = pilasengine.actores.Estrella(pilas)
     estrella.escala = 0.5
     pilas.colisiones.agregar(estrella, nave, asignar_arma_doble)
+    estrella.rotacion = [360, -360]
 
 pilas.tareas.siempre(25, crear_estrella)
 #-----------------------------------------------------------------
