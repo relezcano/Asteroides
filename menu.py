@@ -6,14 +6,14 @@ pilas = pilasengine.iniciar()
 class EscenaMenu(pilasengine.escenas.Escena):
 
     def iniciar(self):
-        # Contenido de la escena principal: menu, fondo...
+        # Contenido de la escena principal: menu, fondo, logo del juego
         pilas.fondos.FondoMozaico("imagenes/espacio.jpg")
         self.menu_inicial()
         self.logo_juego()
 
     @staticmethod
     def logo_juego():
-        # importamos logo desde carpeta
+        # importamos logo desde carpeta imagenes
         imagen = pilas.imagenes.cargar("imagenes/titulo.png")
         logo = pilas.actores.Actor()
         logo.imagen = imagen
@@ -29,9 +29,11 @@ class EscenaMenu(pilasengine.escenas.Escena):
         self.menu = self.pilas.actores.Menu(opciones, y=20)
 
     def iniciar_juego(self):
+        #Importamos el codigo del juego desde el archivo juego.py
         import juego
 
     def pantalla_ayuda(self):
+        #Seleccionamos la escena Ayuda.
         self.pilas.escenas.Ayuda()
 
     def salir_juego(self):

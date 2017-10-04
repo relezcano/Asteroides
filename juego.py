@@ -173,7 +173,7 @@ def crear_estrella():
 pilas.tareas.siempre(25, crear_estrella)
 #-----------------------------------------------------------------
 
-# Crear Estrella-------------------------------------------------
+# Crear Moneda-------------------------------------------------
 def crear_moneda():
     moneda = pilasengine.actores.Moneda(pilas)
     moneda.escala = 2
