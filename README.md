@@ -1,4 +1,4 @@
-# Asteroides
+# ASTEROIDES
 
 #Asteroides es un juego programado en Python utilizando las librerias de Pilasengine.
 #Desarrollado como un trabajo practico para la materia Programación Orientada a Objetos (POO) de la carrera de Sistemas del
