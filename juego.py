@@ -213,7 +213,7 @@ def perder(nave, enemigos):
     pilas.colisiones.agregar(nave, enemigos, nave.eliminar)
     pilas.camara.vibrar()
     pilas.camara.vibrar(intensidad=3.5, tiempo=2)
-    pilas.avisar("HAS PERDIDO X_X - Conseguiste %d puntos" %(puntaje.obtener()))
+    pilas.avisar("HAS PERDIDO (x_x) | Conseguiste %d puntos" %(puntaje.obtener()))
 
 pilas.colisiones.agregar(nave, enemigos, perder)
 
