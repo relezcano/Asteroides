@@ -43,7 +43,7 @@ class EscenaMenu(pilasengine.escenas.Escena):
 MENSAJE_AYUDA = """
 En Asteroides, tienes que controlar una nave 
 usando el teclado. El objetivo del juego es 
-destruir todas las piedras del espacio disparando.
+destruir la mayor cantidad de asteroides.
 Para disparar tienes que usar la barra espaciadora 
 y para mover la nave puedes usar las flechas de 
 direccion del teclado. Si tocas la Estrella 

@@ -5,7 +5,7 @@ from pilasengine.actores.actor import Actor
 
 pilas = pilasengine.iniciar()
 
-puntaje = pilas.actores.Puntaje(-280, 200, color=pilas.colores.blanco)
+puntaje = pilas.actores.Puntaje(280, 200, color=pilas.colores.blanco)
 
 # Actor FONDO -----------------------------------------------------------------
 class Espacio(FondoMozaico):
@@ -179,7 +179,7 @@ def crear_moneda():
     moneda.escala = 2
     pilas.colisiones.agregar(moneda, nave, asignar_arma_rapida)
 
-pilas.tareas.siempre(60, crear_moneda)
+pilas.tareas.siempre(63, crear_moneda)
 #-----------------------------------------------------------------
 
 # Crear NAVE------------------------------------------------------
@@ -199,13 +199,13 @@ def asignar_arma_simple():
 def asignar_arma_doble(estrella, nave):
     nave.disparo_doble = True
     estrella.eliminar()
-    pilas.tareas.siempre(8, asignar_arma_simple)
+    pilas.tareas.siempre(12, asignar_arma_simple)
     pilas.avisar("OBTIENES ARMA DOBLE")
 
 def asignar_arma_rapida(moneda, nave):
     nave.demora_entre_disparos = 1
     moneda.eliminar()
-    pilas.tareas.siempre(8, asignar_arma_simple)
+    pilas.tareas.siempre(12, asignar_arma_simple)
     pilas.avisar("OBTIENES ARMA RAPIDA")
 
 def perder(nave, enemigos):
