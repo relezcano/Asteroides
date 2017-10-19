@@ -1,6 +1,5 @@
 from pilasengine.fondos.fondo_mozaico import FondoMozaico
 
-
 class Espacio(FondoMozaico):
     def iniciar(self):
         self.imagen = "imagenes/espacio1.jpg"
