@@ -27,7 +27,9 @@ barra espaciadora.
 
 - Nave Espacial.
 - Asteroide.
-- Fondo
+- Fondo.
+- Boton para reiniciar.
+- Boton para salir.
 
 # Actores propios de pilas utilizados para este juego:
 
@@ -42,6 +44,8 @@ Nombre del archivo: menu.py
 
 #El segundo archivo contiene el juego propiamente dicho, con los actores personalizados, las funciones del juego, armas obtenibles, objetos de mejoras, fondo interactivo.
 Este archivo es importado al código del menu para relacionar dicho menu con el código del juego. Se utiliza "import juego" en el menu para lograr esto.
+
+#Se agregaron 2 nuevos botones en la última actualización. Un botón es para reiniciar el juego y el otro botón es para salir. Ambos botones aparecen luego de haber muerto.
 
 @ Los actores fueron personalizados en base a modelos prediseñados de la libreria Pilas, cambiando y agregando funciones, imagenes, tamaños, ubicaciones, acciones y demas propiedades de dichos objetos.
 
