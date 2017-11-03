@@ -7,14 +7,14 @@ class NaveEspacial(pilasengine.actores.Actor):
 
     def iniciar(self, x=0, y=-190):
 
-        self.imagen = "imagenes/nave2.png"
-        self.escala = 0.5
+        self.imagen = "imagenes/navejugador.png"
+        self.escala = 0.3
         self.x = x
         self.y = y
         self.radio_de_colision = 33
         self.velocidad_x = 0
         self.velocidad_y = 0
-        self.velocidad = 5
+        self.velocidad = 6
         self.disparos = []
         self._contador_demora = 6
         self.demora_entre_disparos = 10

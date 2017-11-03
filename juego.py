@@ -4,10 +4,8 @@ import pilasengine
 from espacio import Espacio
 from nave import NaveEspacial
 from asteroide import Asteroide
-from boton import BotonVolver
-
-
-
+from boton import BotonReiniciar
+from botonsalir import BotonSalir
 
 pilas = pilasengine.iniciar()
 
@@ -53,9 +51,6 @@ nave.escala = 0.3
 nave.definir_enemigos(enemigos, puntaje.aumentar)
 #-----------------------------------------------------------------
 
-def eliminar_estrella(estrella):
-    estrella.eliminar()
-
 def asignar_arma_simple():
     nave.disparo_doble = False
     nave.demora_entre_disparos = 10
@@ -78,7 +73,8 @@ def perder(nave, enemigos):
     pilas.camara.vibrar()
     pilas.camara.vibrar(intensidad=3.5, tiempo=2)
     pilas.avisar("HAS PERDIDO (x_x) | Conseguiste %d puntos" %(puntaje.obtener()))
-    pilas.actores.BotonVolver()
+    pilas.actores.BotonReiniciar()
+    pilas.actores.BotonSalir()
 
 pilas.colisiones.agregar(nave, enemigos, perder)
 
@@ -87,7 +83,8 @@ pilas.avisar(u"Destruye los asteroides")
 
 pilas.actores.vincular(NaveEspacial)
 pilas.actores.vincular(Asteroide)
-pilas.actores.vincular(BotonVolver)
+pilas.actores.vincular(BotonReiniciar)
+pilas.actores.vincular(BotonSalir)
 
 
 pilas.ejecutar()
