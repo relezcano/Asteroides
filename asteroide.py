@@ -12,7 +12,7 @@ class Asteroide(pilasengine.actores.Actor):
         self.aprender(pilas.habilidades.PuedeExplotar)
         self.x = pilas.azar(-200, 200)
         self.y = 300
-        self.velocidad = pilas.azar(10, 60) / 10.0
+        self.velocidad = pilas.azar(10, 20) / 10.0
 
     def actualizar(self):
         self.rotacion += 10

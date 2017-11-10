@@ -1,6 +1,8 @@
 # -*- coding: utf-8
 from pilasengine.actores.actor import pilasengine
 
+from nave import NaveEspacial
+
 pilas = pilasengine.iniciar()
 
 class Enemigo1(pilasengine.actores.Actor):
@@ -26,6 +28,7 @@ class Enemigo1(pilasengine.actores.Actor):
         self.tarea_disparar = pilas.tareas.siempre(3, self.realizar_disparo)
 
     def actualizar(self):
+        self.imitar(NaveEspacial)
         if self.escala >= 0.7:  # Elovni tiene un punto de mira que indica que se puede matar
             self.imagen = "enemigo1.png"
 
