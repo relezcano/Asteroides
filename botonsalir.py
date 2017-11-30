@@ -7,7 +7,7 @@ class BotonSalir(pilasengine.actores.Actor):
         self.imagen = "imagenes/botoncerrar.png"
         self.cuando_hace_click = self._salir
         self.y = [190]
-        self.x = -200
+        self.x = -280
         self.z = -5
         self.escala = 0.3
 

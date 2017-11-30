@@ -5,7 +5,7 @@ pilas = pilasengine.iniciar()
 
 class NaveEspacial(pilasengine.actores.Actor):
 
-    def iniciar(self, x=0, y=-190):
+    def iniciar(self, x=0, y=-250):
 
         self.imagen = "imagenes/navejugador.png"
         self.escala = 0.3

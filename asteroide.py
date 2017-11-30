@@ -10,7 +10,7 @@ class Asteroide(pilasengine.actores.Actor):
         self.imagen = "imagenes/asteroide.png"
         self.escala = 0.5
         self.aprender(pilas.habilidades.PuedeExplotar)
-        self.x = pilas.azar(-200, 200)
+        self.x = pilas.azar(-300, 300)
         self.y = 300
         self.velocidad = pilas.azar(10, 20) / 10.0
 

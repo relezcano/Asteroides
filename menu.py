@@ -1,7 +1,7 @@
 # coding=utf-8
 import pilasengine
 
-pilas = pilasengine.iniciar()
+pilas = pilasengine.iniciar(ancho=750, alto=600, pantalla_completa=True)
 
 class EscenaMenu(pilasengine.escenas.Escena):
 
@@ -46,10 +46,11 @@ usando el teclado. El objetivo del juego es
 destruir la mayor cantidad de asteroides.
 Para disparar tienes que usar la barra espaciadora 
 y para mover la nave puedes usar las flechas de 
-direccion del teclado. Si tocas la Estrella 
-obtendras un arma doble y si tocas la Moneda 
-un arma rapida. Si pierdes puedes elegir
-reiniciar la partida o salir del juego.
+direccion del teclado.
+Si tocas la Estrella obtendras un arma doble y 50 pts.
+Si tocas la Moneda un arma rapida y 100 pts.
+El objetivo del juego es tratar de superar los
+3 niveles y hacer el maximo puntaje.
 """
 
 

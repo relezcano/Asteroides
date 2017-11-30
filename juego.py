@@ -7,9 +7,9 @@ from asteroide import Asteroide
 from boton import BotonReiniciar
 from botonsalir import BotonSalir
 
-pilas = pilasengine.iniciar()
+pilas = pilasengine.iniciar(ancho=750, alto=600, pantalla_completa=True)
 
-puntaje = pilas.actores.Puntaje(280, 200, color=pilas.colores.blanco)
+puntaje = pilas.actores.Puntaje(280, 260, color=pilas.colores.blanco)
 
 # Crear el Fondo Personalizado----------------------------------
 fondo = Espacio(pilas)
@@ -40,8 +40,9 @@ def crear_moneda():
     moneda = pilasengine.actores.Moneda(pilas)
     moneda.escala = 2
     pilas.colisiones.agregar(moneda, nave, asignar_arma_rapida)
+    moneda.rotacion = [-360, 360]
 
-pilas.tareas.siempre(63, crear_moneda)
+pilas.tareas.siempre(70, crear_moneda)
 #-----------------------------------------------------------------
 
 # Crear NAVE------------------------------------------------------
@@ -57,6 +58,7 @@ def asignar_arma_simple():
 
 
 def asignar_arma_doble(estrella, nave):
+    puntaje.aumentar(50)
     nave.disparo_doble = True
     estrella.eliminar()
     pilas.tareas.siempre(12, asignar_arma_simple)
@@ -64,6 +66,7 @@ def asignar_arma_doble(estrella, nave):
 
 
 def asignar_arma_rapida(moneda, nave):
+    puntaje.aumentar(100)
     nave.demora_entre_disparos = 1
     moneda.eliminar()
     pilas.tareas.siempre(12, asignar_arma_simple)
@@ -76,7 +79,8 @@ def perder(nave, enemigos):
     pilas.camara.vibrar(intensidad=3.5, tiempo=2)
     texto = pilas.actores.Texto("GAME OVER (x_x) | Conseguiste %d puntos" %(puntaje.obtener()))
     texto.color = pilas.colores.rojo
-    pilas.actores.BotonReiniciar()
+    puntaje.eliminar()
+    # pilas.actores.BotonReiniciar()
     pilas.actores.BotonSalir()
 
 pilas.colisiones.agregar(nave, enemigos, perder)
@@ -87,7 +91,7 @@ def nivel_2(enemigos, fondo):
     enemigos.velocidad = pilas.azar(50, 60) / 10.0
     fondo.imagen = "imagenes/espacio_nivel_2.jpg"
     fondo.dy = -8
-    pilas.tareas.siempre(0.55, crear_enemigo)
+    pilas.tareas.siempre(0.50, crear_enemigo)
 
 pilas.tareas.agregar(30, nivel_2, enemigos, fondo)
 
@@ -97,7 +101,7 @@ def nivel_3(enemigos, fondo):
     enemigos.velocidad = pilas.azar(50, 60) / 10.0
     fondo.imagen = "imagenes/espacio_nivel_3.jpeg"
     fondo.dy = -12
-    pilas.tareas.siempre(0.45, crear_enemigo)
+    pilas.tareas.siempre(0.35, crear_enemigo)
 
 pilas.tareas.agregar(60, nivel_3, enemigos, fondo)
 
@@ -111,7 +115,9 @@ def fin_juego(fondo):
     texto2.y = 35
     fondo.imagen = "imagenes/final.jpg"
     fondo.dy = 0
+    puntaje.eliminar()
     nave.eliminar()
+    pilas.actores.BotonSalir()
 
 pilas.tareas.agregar(90, fin_juego, fondo)
 
