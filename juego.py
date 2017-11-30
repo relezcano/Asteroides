@@ -42,7 +42,7 @@ def crear_moneda():
     pilas.colisiones.agregar(moneda, nave, asignar_arma_rapida)
     moneda.rotacion = [-360, 360]
 
-pilas.tareas.siempre(70, crear_moneda)
+pilas.tareas.siempre(65, crear_moneda)
 #-----------------------------------------------------------------
 
 # Crear NAVE------------------------------------------------------
@@ -112,7 +112,7 @@ def fin_juego(fondo):
     texto.y = 70
     texto2 = pilas.actores.Texto("Felicitaciones!!! Has obtenido %d puntos" %(puntaje.obtener()))
     texto2.color = pilas.colores.verde
-    texto2.y = 35
+    texto2.y = -45
     fondo.imagen = "imagenes/final.jpg"
     fondo.dy = 0
     puntaje.eliminar()
